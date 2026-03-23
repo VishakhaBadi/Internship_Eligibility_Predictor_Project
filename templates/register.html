@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register | InternReady</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family:'Segoe UI', sans-serif;
+            background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+            url("{{ url_for('static', filename='internship.jpg') }}") no-repeat center/cover;
+        }
+
+        .auth-card{
+            width:350px;
+            background:white;
+            padding:40px 30px;
+            border-radius:15px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.3);
+            text-align:center;
+            animation:fadeIn 0.6s ease;
+        }
+
+        .auth-card h2{
+            color:#0d6efd;
+            margin-bottom:10px;
+        }
+
+        .auth-card p{
+            font-size:14px;
+            color:#666;
+            margin-bottom:25px;
+        }
+
+        .input-group{
+            text-align:left;
+            margin-bottom:18px;
+        }
+
+        .input-group label{
+            font-size:14px;
+            font-weight:600;
+        }
+
+        .input-group input{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            outline:none;
+            transition:0.3s;
+        }
+
+        .input-group input:focus{
+            border-color:#0d6efd;
+            box-shadow:0 0 5px rgba(13,110,253,0.3);
+        }
+
+        .auth-btn{
+            width:100%;
+            padding:12px;
+            background:#198754;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .auth-btn:hover{
+            background:#157347;
+            transform:translateY(-2px);
+        }
+
+        .link{
+            margin-top:15px;
+            font-size:13px;
+        }
+
+        .link a{
+            color:#0d6efd;
+            text-decoration:none;
+        }
+
+        .link a:hover{
+            text-decoration:underline;
+        }
+
+        @keyframes fadeIn{
+            from{opacity:0; transform:translateY(20px);}
+            to{opacity:1; transform:translateY(0);}
+        }
+
+        @media(max-width:400px){
+            .auth-card{width:90%;}
+        }
+    </style>
+</head>
+
+<body>
+
+<form action="/register" method="POST" class="auth-card">
+    <h2>Create Account</h2>
+    <p>Start your internship journey today</p>
+
+    <div class="input-group">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter username" required>
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter password" required>
+    </div>
+
+    <button class="auth-btn">Register</button>
+
+    <div class="link">
+        Already have account? <a href="/login">Login</a>
+    </div>
+</form>
+
+</body>
+</html>

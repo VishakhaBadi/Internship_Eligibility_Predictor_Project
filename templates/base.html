@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Eligibility Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav>
+    <h2>InternReady</h2>
+
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/model">Model</a></li>
+        <li><a href="/faqn">FAQ</a></li>
+    </ul>
+
+    <div class="profile">
+        <div class="profile-icon" onclick="toggleMenu(event)">
+            👤
+        </div>
+
+        <div class="profile-menu" id="profileMenu">
+            {% if session.get('user') %}
+                <div class="profile-header">
+                    <strong>{{ session['user'] }}</strong>
+                    <span>Logged In</span>
+                </div>
+
+                <a href="/profile">👤 My Profile</a>
+                <a href="/contact">📞 Contact</a>
+                <a href="/logout" class="logout">🚪 Logout</a>
+            {% else %}
+                <a href="/login">🔐 Login</a>
+                <a href="/contact">📞 Contact</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>   <!-- ✅ CLOSE NAV HERE -->
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+<footer>
+    <p>© 2026 Internship Eligibility Predictor | Built with Flask</p>
+</footer>
+
+<script>
+function toggleMenu(event) {
+    event.stopPropagation();
+    document.getElementById("profileMenu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("profileMenu");
+    if (!e.target.closest(".profile")) {
+        menu.classList.remove("show");
+    }
+});
+</script>
+
+<script>
+function revealOnScroll() {
+    let elements = document.querySelectorAll(".scroll-animate");
+
+    elements.forEach((el) => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+<script>
+// FAQ toggle
+document.addEventListener("DOMContentLoaded", function () {
+    let questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(q => {
+        q.addEventListener("click", () => {
+            let parent = q.parentElement;
+            parent.classList.toggle("active");
+        });
+    });
+});
+</script>
+
+</body>
+</html>

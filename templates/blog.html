@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="blog-container">
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='p.avif') }}">
+        <h3>Python</h3>
+        <p>Learn Python for data analysis, automation, and backend development.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='wb.jpg') }}">
+        <h3>Web Development</h3>
+        <p>Master HTML, CSS, and JavaScript to build modern websites.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='ml.webp') }}">
+        <h3>Machine Learning</h3>
+        <p>Understand algorithms and build intelligent predictive models.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='ai.jpg') }}">
+        <h3>Artificial Intelligence</h3>
+        <p>Explore AI concepts like NLP, computer vision, and automation.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='sql.png') }}">
+        <h3>SQL & Databases</h3>
+        <p>Manage and analyze data efficiently using SQL queries.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='r.jpg') }}">
+        <h3>Resume Building</h3>
+        <p>Create a professional resume to stand out in applications.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='iv.avif') }}">
+        <h3>Interview Preparation</h3>
+        <p>Practice technical and HR questions to boost confidence.</p>
+    </div>
+
+    <div class="blog-card">
+        <img src="{{ url_for('static', filename='pp.avif') }}">
+        <h3>Projects</h3>
+        <p>Build real-world projects to showcase your skills.</p>
+    </div>
+
+</div>
+
+{% endblock %}

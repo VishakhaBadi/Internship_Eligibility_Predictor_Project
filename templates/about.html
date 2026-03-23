@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO -->
+<section class="about-hero">
+    <h1>About Internship Eligibility Predictor</h1>
+    <p>Empowering students with smart insights to achieve their career goals.</p>
+</section>
+
+<!-- INTRO -->
+<section class="about-section">
+    <div class="about-flex">
+        <div class="about-text">
+            <h2>Our Project</h2>
+            <p>
+                The Internship Eligibility Predictor is designed to help students evaluate their readiness
+                for internships based on key academic and skill-based parameters. Many students struggle
+                to understand whether they meet industry expectations, and this system provides a clear answer.
+            </p>
+
+            <p>
+                By analyzing factors such as CGPA, technical skills, projects, certifications, and practical exposure,
+                the system generates a prediction that helps students understand their current position.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="{{ url_for('static', filename='in.jpg') }}">
+        </div>
+    </div>
+</section>
+
+<!-- OBJECTIVE -->
+<section class="about-section light">
+    <div class="about-flex reverse">
+        <div class="about-text">
+            <h2>Our Objective</h2>
+            <p>
+                The main objective of this project is to guide students toward better career decisions.
+                It helps them identify skill gaps and improve their profile before applying for internships.
+            </p>
+
+            <p>
+                This system reduces uncertainty and gives students a clear direction on what to improve
+                to increase their chances of selection.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="{{ url_for('static', filename='o.jpg') }}">
+        </div>
+    </div>
+</section>
+
+<!-- WORKING -->
+<section class="about-section">
+    <div class="about-flex">
+        <div class="about-text">
+            <h2>How It Works</h2>
+            <p>
+                The system collects user input such as academic scores, skills, and experience.
+                It then processes this data using predefined logic or machine learning models.
+            </p>
+
+            <p>
+                Based on this analysis, the system provides an instant prediction indicating whether
+                the student is eligible for internships and what improvements are needed.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="{{ url_for('static', filename='w.avif') }}">
+        </div>
+    </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="about-section light">
+    <div class="about-flex reverse">
+        <div class="about-text">
+            <h2>Technologies Used</h2>
+            <p>
+                This project is developed using modern web technologies and tools:
+            </p>
+
+            <ul>
+                <li>Python & Flask for backend development</li>
+                <li>HTML & CSS for frontend design</li>
+                <li>Machine Learning for prediction logic</li>
+                <li>Bootstrap for responsive UI</li>
+            </ul>
+        </div>
+
+        <div class="about-img">
+            <img src="{{ url_for('static', filename='t.jpg') }}">
+        </div>
+    </div>
+</section>
+
+{% endblock %}

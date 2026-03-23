@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="home-section scroll-animate">
+<!-- HERO SECTION -->
+<section class="home-hero">
+    <div class="home-overlay">
+        <h1>Internship Eligibility Predictor</h1>
+        <p>Analyze your skills, evaluate your profile, and boost your chances of getting top internships.</p>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="home-section">
+    <div class="container">
+        <h2>Why Internship Matters?</h2>
+        <p>
+            Internships play a crucial role in shaping a student's career. They provide real-world experience,
+            industry exposure, and help students understand practical applications of their knowledge.
+            Our system helps you measure your readiness and guides you towards improvement.
+        </p>
+    </div>
+</section>
+
+<!-- STEP 1 -->
+<section class="home-flex">
+    <div class="home-text">
+        <h3>Step 1: Enter Your Academic Details</h3>
+        <p>
+            Provide your CGPA, technical skills, projects, and certifications. These factors play a major role
+            in determining your internship eligibility.
+        </p>
+    </div>
+    <div class="home-img">
+        <img src="{{ url_for('static', filename='ac.webp') }}">
+    </div>
+</section>
+
+<!-- STEP 2 -->
+<section class="home-flex reverse">
+    <div class="home-text">
+        <h3>Step 2: Smart Analysis</h3>
+        <p>
+            Our system uses intelligent evaluation techniques to analyze your data and compare it with industry standards.
+        </p>
+    </div>
+    <div class="home-img">
+        <img src="{{ url_for('static', filename='s.webp') }}">
+    </div>
+</section>
+
+<!-- STEP 3 -->
+<section class="home-flex">
+    <div class="home-text">
+        <h3>Step 3: Get Instant Prediction</h3>
+        <p>
+            Instantly know whether you are eligible for internships and understand areas where you need improvement.
+        </p>
+    </div>
+    <div class="home-img">
+        <img src="{{ url_for('static', filename='i.jpg') }}">
+    </div>
+</section>
+
+<!-- EXTRA CONTENT -->
+<section class="home-section">
+    <div class="container">
+        <h2>How This System Helps You</h2>
+        <p>
+            ✔ Identify strengths and weaknesses  
+            ✔ Improve your resume quality  
+            ✔ Get insights into skill gaps  
+            ✔ Prepare better for real-world opportunities  
+            ✔ Increase your chances of selection  
+        </p>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="home-cta">
+    <h2>Start Your Internship Journey Today 🚀</h2>
+    <a href="/predict" class="home-btn">Go to Prediction</a>
+</section>
+
+
+{% endblock %}

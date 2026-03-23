@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO -->
+<section class="model-hero scroll-animate">
+    <h1>Project Model & Technologies</h1>
+    <p>Understanding the working structure and technologies behind the Internship Eligibility Predictor.</p>
+</section>
+
+<!-- SYNOPSIS -->
+<section class="model-section scroll-animate">
+    <div class="model-flex">
+        <div class="model-text">
+            <h2>Project Synopsis</h2>
+            <p>
+                The Internship Eligibility Predictor is a smart system designed to evaluate
+                student readiness for internships using academic and skill-based parameters.
+                It helps students understand whether they meet industry expectations.
+            </p>
+            <p>
+                The system collects user inputs such as CGPA, skills, projects, and experience,
+                processes them, and provides an instant prediction result.
+            </p>
+        </div>
+        <div class="model-img">
+            <img src="{{ url_for('static', filename='ip.jpg') }}">
+        </div>
+    </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="model-section light scroll-animate">
+    <div class="model-flex reverse">
+        <div class="model-text">
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Python – Core programming</li>
+                <li>Flask – Backend framework</li>
+                <li>HTML & CSS – Frontend design</li>
+                <li>Bootstrap – Responsive layout</li>
+                <li>Machine Learning – Prediction logic</li>
+            </ul>
+        </div>
+        <div class="model-img">
+            <img src="{{ url_for('static', filename='tec.avif') }}">
+        </div>
+    </div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="model-section scroll-animate">
+    <div class="model-flex">
+        <div class="model-text">
+            <h2>System Workflow</h2>
+            <p>
+                1. User enters details (CGPA, skills, etc.)  
+                2. Data validation is performed  
+                3. Model processes input  
+                4. Prediction result is generated  
+            </p>
+        </div>
+        <div class="model-img">
+            <img src="{{ url_for('static', filename='Screenshot 2026-03-23 230813.png') }}">
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="model-section light scroll-animate">
+    <div class="model-flex reverse">
+        <div class="model-text">
+            <h2>Project Benefits</h2>
+            <p>
+                ✔ Helps students analyze their profile  
+                ✔ Identifies skill gaps  
+                ✔ Improves internship chances  
+                ✔ Provides quick and accurate results  
+            </p>
+        </div>
+        <div class="model-img">
+            <img src="{{ url_for('static', filename='b.webp') }}">
+        </div>
+    </div>
+</section>
+
+{% endblock %}
