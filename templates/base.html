@@ -94,6 +94,64 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+</script>
+
+<!-- Chatbot Button -->
+<div class="chat-btn" onclick="toggleChat()">💬</div>
+
+<!-- Chat Window -->
+<div class="chat-box" id="chatBox">
+    <div class="chat-header">
+        Internship Assistant
+        <span onclick="toggleChat()">✖</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <p><b>Bot:</b> Hello! Ask me about internships, skills, or projects 😊</p>
+    </div>
+
+    <input type="text" id="userInput" placeholder="Type a message..." onkeydown="handleEnter(event)">
+</div>
+
+<script>
+function toggleChat() {
+    let box = document.getElementById("chatBox");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function handleEnter(e) {
+    if (e.key === "Enter") {
+        let input = document.getElementById("userInput");
+        let message = input.value.toLowerCase();
+        let chat = document.getElementById("chatBody");
+
+        chat.innerHTML += "<p><b>You:</b> " + message + "</p>";
+
+        let reply = "Sorry, I didn't understand.";
+
+        if (message.includes("skills")) {
+            reply = "You should learn Python, SQL, Web Development.";
+        }
+        else if (message.includes("cgpa")) {
+            reply = "Maintain CGPA above 7 for better chances.";
+        }
+        else if (message.includes("project")) {
+            reply = "Try to build at least 3-5 real-world projects.";
+        }
+        else if (message.includes("internship")) {
+            reply = "Internships help you gain real-world experience.";
+        }
+        else if (message.includes("hello")) {
+            reply = "Hello! How can I help you?";
+        }
+
+        chat.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
+
+        input.value = "";
+        chat.scrollTop = chat.scrollHeight;
+    }
+}
 </script>
 
 </body>
