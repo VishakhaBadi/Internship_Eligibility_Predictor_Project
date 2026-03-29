@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="detail-hero">
+    <img src="{{ url_for('static', filename='p.avif') }}">
+    <div class="overlay"><h1>Python Programming</h1></div>
+</div>
+
+<div class="detail-content">
+
+<div class="section fade-in">
+<h2>Introduction</h2>
+<p>Python is a powerful and beginner-friendly language used in web development, AI, ML, and automation.</p>
+</div>
+
+<div class="section fade-in">
+<h2>Why Learn Python?</h2>
+<ul>
+<li>Easy to learn</li>
+<li>High demand</li>
+<li>Used in AI & Data Science</li>
+</ul>
+</div>
+
+<div class="section fade-in">
+<h2>Applications</h2>
+<p>Web apps, automation, data analysis, machine learning systems.</p>
+</div>
+
+<div class="back-btn"><a href="/blog">⬅ Back to Blog</a></div>
+
+</div>
+{% endblock %}

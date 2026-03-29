@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="detail-hero">
+<img src="{{ url_for('static', filename='ai.jpg') }}">
+<div class="overlay"><h1>Artificial Intelligence</h1></div>
+</div>
+
+<div class="detail-content">
+
+<div class="section fade-in">
+<h2>Introduction</h2>
+<p>AI is the simulation of human intelligence in machines.</p>
+</div>
+
+<div class="section fade-in">
+<h2>Areas</h2>
+<ul>
+<li>NLP</li>
+<li>Computer Vision</li>
+<li>Robotics</li>
+</ul>
+</div>
+
+<div class="section fade-in">
+<h2>Applications</h2>
+<p>Chatbots, automation, smart assistants.</p>
+</div>
+
+<div class="back-btn"><a href="/blog">⬅ Back to Blog</a></div>
+
+</div>
+{% endblock %}

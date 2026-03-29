@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="detail-hero">
+<img src="{{ url_for('static', filename='iv.avif') }}">
+<div class="overlay"><h1>Interview Preparation</h1></div>
+</div>
+
+<div class="detail-content">
+
+<div class="section fade-in">
+<h2>Introduction</h2>
+<p>Interview preparation is key to getting selected.</p>
+</div>
+
+<div class="section fade-in">
+<h2>Focus Areas</h2>
+<ul>
+<li>Technical questions</li>
+<li>HR questions</li>
+<li>Communication</li>
+</ul>
+</div>
+
+<div class="section fade-in">
+<h2>Tips</h2>
+<p>Practice daily and build confidence.</p>
+</div>
+
+<div class="back-btn"><a href="/blog">⬅ Back to Blog</a></div>
+
+</div>
+{% endblock %}

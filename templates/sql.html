@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="detail-hero">
+<img src="{{ url_for('static', filename='sql.png') }}">
+<div class="overlay"><h1>SQL & Databases</h1></div>
+</div>
+
+<div class="detail-content">
+
+<div class="section fade-in">
+<h2>Introduction</h2>
+<p>SQL is used to manage and retrieve data from databases.</p>
+</div>
+
+<div class="section fade-in">
+<h2>Concepts</h2>
+<ul>
+<li>Tables</li>
+<li>Queries</li>
+<li>Joins</li>
+</ul>
+</div>
+
+<div class="section fade-in">
+<h2>Importance</h2>
+<p>Essential for managing structured data in applications.</p>
+</div>
+
+<div class="back-btn"><a href="/blog">⬅ Back to Blog</a></div>
+
+</div>
+{% endblock %}

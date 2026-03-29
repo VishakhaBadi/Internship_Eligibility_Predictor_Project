@@ -1,5 +1,35 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
-<h2>User Profile</h2>
-<p>Username: {{ session['user'] }}</p>
+
+<div class="profile-container">
+
+    <div class="profile-card">
+        
+        <!-- Profile Icon -->
+        <div class="profile-avatar">
+            👤
+        </div>
+
+        <!-- User Info -->
+        <h2>{{ session['user'] }}</h2>
+        <p class="status">Active User</p>
+
+        <hr>
+
+        <div class="profile-details">
+            <p><strong>Username:</strong> {{ session['user'] }}</p>
+            <p><strong>Email:</strong> {{ session['user'] }}@gmail.com</p>
+            <p><strong>Role:</strong> Student</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="profile-actions">
+            <a href="/predict" class="btn">Go to Prediction</a>
+            <a href="/logout" class="btn logout">Logout</a>
+        </div>
+
+    </div>
+
+</div>
+
 {% endblock %}

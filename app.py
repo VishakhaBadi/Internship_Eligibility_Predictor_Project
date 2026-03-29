@@ -101,5 +101,42 @@ def logout():
     session.pop('user',None)
     return redirect(url_for('login'))
 
+
+
+@app.route('/blog/python')
+def python_blog():
+    return render_template('python.html')
+
+@app.route('/blog/web')
+def web_blog():
+    return render_template('web.html')
+
+@app.route('/blog/ml')
+def ml_blog():
+    return render_template('ml.html')
+
+@app.route('/blog/ai')
+def ai_blog():
+    return render_template('ai.html')
+
+@app.route('/blog/sql')
+def sql_blog():
+    return render_template('sql.html')
+
+@app.route('/blog/resume')
+def resume_blog():
+    return render_template('resume.html')
+
+@app.route('/blog/interview')
+def interview_blog():
+    return render_template('interview.html')
+
+@app.route('/blog/projects')
+def projects_blog():
+    return render_template('projects.html')
+
+
+
+
 if __name__=='__main__':
     app.run(debug=True)
