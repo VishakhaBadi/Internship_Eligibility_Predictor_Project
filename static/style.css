@@ -836,3 +836,15 @@ footer {
 .profile-actions .logout {
     background: #dc3545;
 }
+
+
+/* Fix navbar layering */
+nav {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Fix profile dropdown */
+.profile-menu {
+    z-index: 2000;
+}
